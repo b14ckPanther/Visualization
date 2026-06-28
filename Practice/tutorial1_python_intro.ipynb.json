@@ -1,0 +1,1402 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "a94fcbef",
+   "metadata": {},
+   "source": [
+    "# Python Tutorial 1\n",
+    "\n",
+    "This is a basic tutorial aimed at helping you learn the basics of Python.\n",
+    "Read the instructions, run the code blocks to see results, and fill in the code in the code blocks where a task is required.\n",
+    "\n",
+    "\n",
+    "Submission alone in moodle with the student id as the file name, submit both:\n",
+    "1. ipynb file - this file after saving your progress. e.g. 0123456789.ipynb\n",
+    "2. html file - when done, go to File -> Download as -> HTML. e.g. 012345789.html\n",
+    "\n",
+    "submit both files in moodle."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4123b353",
+   "metadata": {},
+   "source": [
+    "# 1. Data Types\n",
+    "\n",
+    "## 1.1 Numeric\n",
+    "\n",
+    "In python there are integer and float numerical numbers, we assign a variable a number by using the '=' sign and the type of the variable it set automatically based on the value.\n",
+    "You can change the variable's type by using the int() and float() functions.\n",
+    "\n",
+    "We can check the variable type by using the type() function."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "598515a9",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2 <class 'int'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = 2\n",
+    "print(x, type(x))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "7e1a9ad4",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2.0 <class 'float'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "y = 2.0\n",
+    "print(y, type(y))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "614e7fc2",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2 <class 'int'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "y = int(2.0)\n",
+    "print(y, type(y))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "01902271",
+   "metadata": {},
+   "source": [
+    "Python supports multiple operations on numerical variables, find the full list here: https://www.w3schools.com/python/python_operators.asp\n",
+    "\n",
+    "### *** Task ***\n",
+    "Create an integer variable a, and a float variable b.\n",
+    "print the result of their sum, multiplication, division and exponentiation of a by b."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "fcf85481",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "11.0\n",
+      "30.0\n",
+      "0.8333333333333334\n"
+     ]
+    }
+   ],
+   "source": [
+    " a = 5\n",
+    " b = 6.0\n",
+    "print(a+b)\n",
+    "print (a*b)\n",
+    "print (a/b)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cbc6022f",
+   "metadata": {},
+   "source": [
+    "## 1.2 Logical / Boolean\n",
+    "\n",
+    "Boolean represent one of two values, True or False. Boolean can be created with a simple assignment (x = False) Or with comparisons (x > y).\n",
+    "\n",
+    "Comparison operators are used to compare two values, again read about the different comparison operators in the link added above. These comparisons are usually used  in if statement that we will cover soon.\n",
+    "\n",
+    "For example:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "3d89dbcc",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = 15\n",
+    "y = 25\n",
+    "\n",
+    "print(x > y)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0c83f809",
+   "metadata": {},
+   "source": [
+    "### *** Task ***\n",
+    "print the result of checking if x and y are equal. if x and y are NOT equal."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "d0bf357d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Add cprinode here.\n",
+    "print (x==b)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5c6bc4aa",
+   "metadata": {},
+   "source": [
+    "## 1.3 Sequences\n",
+    "\n",
+    "Sequences include both lists and tuples.\n",
+    "\n",
+    "**Lists** are used to store multiple items in a single variable. \n",
+    "List items are ordered, changeable, and allow duplicate values. List items are indexed, the first item has index [0], the second item has index [1] etc.\n",
+    "\n",
+    "**Tuples** are used to store multiple items in a single variable. Tuple items are ordered, unchangeable, and allow duplicate values. Tuple items are indexed, the first item has index [0], the second item has index [1] etc.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "62a54472",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "thislist = [\"apple\", \"banana\", 560, False]\n",
+    "\n",
+    "# print the list\n",
+    "print(thislist)\n",
+    "\n",
+    "# print the list len\n",
+    "print(len(thislist))\n",
+    "\n",
+    "#print the item with index = 2\n",
+    "print(thislist[2])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "dff5658c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "thistuple = (\"apple\", \"banana\", \"cherry\")\n",
+    "\n",
+    "# print the tuple\n",
+    "print(thistuple)\n",
+    "\n",
+    "# print the tuple len\n",
+    "print(len(thistuple))\n",
+    "\n",
+    "#print the item with index = 1\n",
+    "print(thistuple[1])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "41b59e6d",
+   "metadata": {},
+   "source": [
+    "## 1.4 Strings \n",
+    "\n",
+    "Strings in python are surrounded by either single quotation marks, or double quotation marks. 'Hello' is the same as \"Hello\"."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "247e571a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# create var s as a string\n",
+    "s = 'hello'\n",
+    "\n",
+    "# the len of the string\n",
+    "print(len(s))\n",
+    "\n",
+    "# check if the string 'll' is in 'hello'\n",
+    "print(\"ll\" in s)\n",
+    "\n",
+    "if \"ll\" in s:\n",
+    "    print(\"Yes, 'll' is present in \", s)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "192611f8",
+   "metadata": {},
+   "source": [
+    "### *** Task ***\n",
+    "create a string in a new variable and check if 'oi' is in the string, if it is print a statement."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6073a737",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Add your code here."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3b46c2b6",
+   "metadata": {},
+   "source": [
+    "## 1.5 Sets \n",
+    "\n",
+    "Sets are used to store multiple items in a single variable. Set items are unordered, unchangeable, and do not allow duplicate values.\n",
+    "\n",
+    "Notice how when adding the same value multiple times, it is only saved once in the set."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "cf6afc74",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "thisset = {\"apple\", \"banana\", \"cherry\", \"apple\", 5, 5, 5,5 ,5, True}\n",
+    "\n",
+    "print(thisset)\n",
+    "\n",
+    "print(len(thisset)) "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "502a0bf0",
+   "metadata": {},
+   "source": [
+    "## 1.6 Dictionaries\n",
+    "\n",
+    "Dictionaries are used to store data values in key:value pairs.\n",
+    "\n",
+    "A dictionary is a collection which is ordered*, changeable and do not allow duplicates."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5453ad96",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "thisdict =\t{\n",
+    "    \"class\": \"Visualization of Information\",\n",
+    "    \"professor\": \"Joel Lanir\",\n",
+    "    \"year\": 2026, \n",
+    "    \"hours\": [13, 14, 15, 16, 17]\n",
+    "}\n",
+    "\n",
+    "print(thisdict)\n",
+    "\n",
+    "print(len(thisdict))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c4878a1c",
+   "metadata": {},
+   "source": [
+    "Dictionary items can be referred to by using the key name."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ddc40959",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "thisdict['class']"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b340dca3",
+   "metadata": {},
+   "source": [
+    "# 2. Input, output and pandas\n",
+    "\n",
+    "We start by exploring how to define a DataFrame in python. Only two commands are explored: (1) The first is for simple assignment of data, and (2) the second is for reading in a data file. There are many ways to read data into python, but we focus on just DataFrame from csv to keep it simple.\n",
+    "\n",
+    "Before loading the csv file we will first explore the two types of variables the padnas library offers, series and dataframe.\n",
+    "\n",
+    "\n",
+    "First we import the library"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "66fdd99f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c8dc1640",
+   "metadata": {},
+   "source": [
+    "## 2.1 Series\n",
+    "Pandas Series is a one-dimensional labeled array capable of holding data of any type (integer, string, float, python objects, etc.). The axis labels are collectively called index. Pandas Series is nothing but a column in an excel sheet.\n",
+    "\n",
+    "Let's create a series."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "57f98a2c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "series1 = pd.Series([1, 3, 5, 6, 8])\n",
+    "\n",
+    "series1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fb354578",
+   "metadata": {},
+   "source": [
+    "you can print the series using the print command"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5942fee2",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(series1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "baf25087",
+   "metadata": {},
+   "source": [
+    "We can locate items in the series based on the index location using the [index ] brakets with the index."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f0044b26",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(series1[2])\n",
+    "print(series1[4])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "203f8966",
+   "metadata": {},
+   "source": [
+    "### *** Series Task ***\n",
+    "\n",
+    "Create a variable called my_first_series with 5 random numbers and two strings.\n",
+    "Print the whole series, then print the value in 3rd index. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "86f9f87a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Add your code here"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2ca8649b",
+   "metadata": {},
+   "source": [
+    "## 2.2 DataFrame\n",
+    "\n",
+    "Pandas DataFrame is two-dimensional size-mutable, tabular data structure with labeled axes (rows and columns). A Data frame is a two-dimensional data structure, i.e., data is aligned in a tabular fashion in rows and columns. Pandas DataFrame consists of three principal components, the **data, rows**, and **columns**."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "014f3e58",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# list of strings\n",
+    "lst = ['Hello', 'Welcome', 'to', 'this', 'tutorial']\n",
+    " \n",
+    "# Calling DataFrame constructor on list\n",
+    "df = pd.DataFrame(lst)\n",
+    "\n",
+    "# printing the dataframe in two ways\n",
+    "print(df)\n",
+    "df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e7b7dc6f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# intialise data of lists.\n",
+    "data = {'Name':['Tom', 'Nick', 'Krish', 'Jack'],\n",
+    "        'Age':[20, 21, 19, 18]}\n",
+    " \n",
+    "# Create DataFrame\n",
+    "df2 = pd.DataFrame(data)\n",
+    " \n",
+    "# Print the output.\n",
+    "df2"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1ea7bd48",
+   "metadata": {},
+   "source": [
+    "### *** DataFrame Task ***\n",
+    "\n",
+    "Create a variable called my_first_df with 2 columns and 3 rows.\n",
+    "Print the dataframe."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "92d718be",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# add your code here"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2272e8ff",
+   "metadata": {},
+   "source": [
+    "## 2.3 Reading & writing a csv file\n",
+    "\n",
+    "It is rare to have just a few data points that you do not mind typing in code lines. It is much more common to have a lot of data points with complicated relationships. Here we will examine how to read a data set from a file using the read_csv function.  We assume that the data file is in the format called \"comma separated values\" (csv). That is, each line contains a row of values which can be numbers or letters, and each value is separated by a comma. We also assume that the very first row contains a list of labels. The idea is that the labels in the top row are used to refer to the different columns of values.\n",
+    "\n",
+    "Before you start, place the cars csv file in the **same directory of this notebook.**\n",
+    "\n",
+    "Using the pandas read_csv method we will load the csv file into a dataframe called cars."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "17defcc8",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Vehicle Name</th>\n",
+       "      <th>Sports Car</th>\n",
+       "      <th>SUV</th>\n",
+       "      <th>Wagon</th>\n",
+       "      <th>Minivan</th>\n",
+       "      <th>Pickup</th>\n",
+       "      <th>AWD</th>\n",
+       "      <th>RWD</th>\n",
+       "      <th>Retail Price</th>\n",
+       "      <th>Dealer Cost</th>\n",
+       "      <th>Engine Size (l)</th>\n",
+       "      <th>Cyl</th>\n",
+       "      <th>HP</th>\n",
+       "      <th>City MPG</th>\n",
+       "      <th>Hwy MPG</th>\n",
+       "      <th>Weight</th>\n",
+       "      <th>Wheel Base</th>\n",
+       "      <th>Len</th>\n",
+       "      <th>Width</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>Acura 3.5 RL 4dr</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>43755</td>\n",
+       "      <td>39014</td>\n",
+       "      <td>3.5</td>\n",
+       "      <td>6</td>\n",
+       "      <td>225</td>\n",
+       "      <td>18</td>\n",
+       "      <td>24</td>\n",
+       "      <td>3880</td>\n",
+       "      <td>115</td>\n",
+       "      <td>197</td>\n",
+       "      <td>72</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>Acura 3.5 RL w/Navigation 4dr</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>46100</td>\n",
+       "      <td>41100</td>\n",
+       "      <td>3.5</td>\n",
+       "      <td>6</td>\n",
+       "      <td>225</td>\n",
+       "      <td>18</td>\n",
+       "      <td>24</td>\n",
+       "      <td>3893</td>\n",
+       "      <td>115</td>\n",
+       "      <td>197</td>\n",
+       "      <td>72</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>Acura MDX</td>\n",
+       "      <td>0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>36945</td>\n",
+       "      <td>33337</td>\n",
+       "      <td>3.5</td>\n",
+       "      <td>6</td>\n",
+       "      <td>265</td>\n",
+       "      <td>17</td>\n",
+       "      <td>23</td>\n",
+       "      <td>4451</td>\n",
+       "      <td>106</td>\n",
+       "      <td>189</td>\n",
+       "      <td>77</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "                    Vehicle Name  Sports Car  SUV  Wagon  Minivan  Pickup  \\\n",
+       "0               Acura 3.5 RL 4dr           0    0      0        0       0   \n",
+       "1  Acura 3.5 RL w/Navigation 4dr           0    0      0        0       0   \n",
+       "2                      Acura MDX           0    1      0        0       0   \n",
+       "\n",
+       "   AWD  RWD  Retail Price  Dealer Cost  Engine Size (l)  Cyl   HP City MPG  \\\n",
+       "0    0    0         43755        39014              3.5    6  225       18   \n",
+       "1    0    0         46100        41100              3.5    6  225       18   \n",
+       "2    1    0         36945        33337              3.5    6  265       17   \n",
+       "\n",
+       "  Hwy MPG Weight Wheel Base  Len Width  \n",
+       "0      24   3880        115  197    72  \n",
+       "1      24   3893        115  197    72  \n",
+       "2      23   4451        106  189    77  "
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "import os\n",
+    "import pandas as pd\n",
+    "os.chdir('/Users/joel/yoel/courses/InfoViz/datasets')\n",
+    "cars = pd.read_csv('cars/cars_data.csv')\n",
+    "\n",
+    "#show the first three rows of the dataframe\n",
+    "cars.head(3)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9f22e046",
+   "metadata": {},
+   "source": [
+    "The variable \"cars\" now contains the data (rows, columns and data). Each column is assigned a name based on the header (the first line in the file). You can now access each individual column using a \"df_name[column_name]\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "2afd8091",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0      0\n",
+       "1      0\n",
+       "2      0\n",
+       "3      1\n",
+       "4      0\n",
+       "      ..\n",
+       "423    0\n",
+       "424    0\n",
+       "425    0\n",
+       "426    0\n",
+       "427    0\n",
+       "Name: Sports Car, Length: 428, dtype: int64"
+      ]
+     },
+     "execution_count": 5,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "cars['Sports Car']"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "628aa3c6",
+   "metadata": {},
+   "source": [
+    "If you are not sure what columns are contained in the variable, you can use the columns command:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "bfec3741",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "cars.columns"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7b4b151f",
+   "metadata": {},
+   "source": [
+    "You can also access a single row:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "4d107e8a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# row with index 2\n",
+    "cars.iloc[2] "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6113631b",
+   "metadata": {},
+   "source": [
+    "If you are not sure what kind of variable types you have in each column, you can use the dtypes command. This will list all the columns with their type:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "bfe41b05",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "cars.dtypes"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "24aec12d",
+   "metadata": {},
+   "source": [
+    "Finally, we want to learn to save data back to a file.  To save the current dataframe to a csv file you use to_csv method with the name of the file:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "26a880fa",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "cars.to_csv('new_cars.csv') #check the new file - in same directory."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "280a44aa",
+   "metadata": {},
+   "source": [
+    "### *** Task ***\n",
+    "\n",
+    "Print the RWD column values.\n",
+    "Print the 350th row."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3a8f67db",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Add your code here"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f81f1c2f",
+   "metadata": {},
+   "source": [
+    "# 3. Operations\n",
+    "\n",
+    "Once you have a series (either a series on its own, or a column in a dataframe - also referred to as a series) most basic operations are available, they will act on the whole vector of the series and can be used to quickly perform numerous calculations with a single command.\n",
+    "\n",
+    "Here we first define a series which we will call \"a\" and will look at how to add and subtract constant numbers from all the numbers in the series. First, the series will contain the numbers 1, 2, 3, and 4. We then see how to add 5 to each of the numbers, subtract 10 from each of the numbers, multiply each number by 4, and divide each number by 5."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f9f04ec3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a = pd.Series([1, 2, 3, 4])\n",
+    "\n",
+    "a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "31bfcaa4",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a + 5"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d078fe3e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a - 10"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "8597f27c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a * 4"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d6d48a67",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a / 5"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2041a6b7",
+   "metadata": {},
+   "source": [
+    "We can also save the new series in a new variable, here we multiply a by 3 and save it in a new variable b."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "240fc884",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "b = a * 3\n",
+    "\n",
+    "b"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a516cbe2",
+   "metadata": {},
+   "source": [
+    "Note that you can do the same operations with other series. For example, to add/multiply/divide the elements in series a to the elements in series b use the following command:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "135e3ef8",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(a + b)\n",
+    "print(a * b)\n",
+    "print(a / b)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7c0b8f95",
+   "metadata": {},
+   "source": [
+    "### *** Task ***\n",
+    "All the examples above were made on a series, they can all be done on a column of a dataframe as well.\n",
+    "\n",
+    "Using the cars dataframe:\n",
+    "1. subtract the dealer cost from the retail price.\n",
+    "2. Multiply the width by 2."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0b589271",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "cars.head(2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ee306c6a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Add your code here"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7915782a",
+   "metadata": {},
+   "source": [
+    "# 4. Slicing and extracting dataframe data\n",
+    "\n",
+    "A reminder on dataframes, the top line of the dataframe, called the **header**, contains the column names. Each horizontal line afterward denotes a **data row**, which begins with the index of the row, and then followed by the actual data. Each data member of a row is called a cell.\n",
+    "\n",
+    "The number of data rows and columns is given in the shape method:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "281c9119",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "cars.shape"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6628ce8d",
+   "metadata": {},
+   "source": [
+    "To view statistical information on each column, you can use the describe() method."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f5988f62",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "cars.describe()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "16d14b73",
+   "metadata": {},
+   "source": [
+    "Using the head(x) and tail(x) methods we can see the first and last x data rows in the dataframe."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ae39e895",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "cars.head(3)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "58074290",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "cars.tail(2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a03064ec",
+   "metadata": {},
+   "source": [
+    "## 4.1 Extracting dataframe data\n",
+    "\n",
+    "To retrieve a data row we use the iloc method and specify the index of the data row."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "91999016",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "cars.iloc[1]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "12aeaeb7",
+   "metadata": {},
+   "source": [
+    "To retrieve data in a cell, we first retrieve the row using the iloc method, then add another brakets [] with the number of column we want or the column name. \n",
+    "\n",
+    "More about the iloc method : https://www.geeksforgeeks.org/python-extracting-rows-using-pandas-iloc/\n",
+    "\n",
+    "For example we want the Retail Price of the second row (index = 1) we can do one of the following two options:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c7bf9628",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "cars.iloc[1][8]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a05961d0",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "cars.iloc[1]['Retail Price']"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "dae5392c",
+   "metadata": {},
+   "source": [
+    "Lastly, we can retrieve rows from a DataFrame based on column values (the actual data) \n",
+    "\n",
+    "The rows of a Dataframe can be selected based on conditions, similar to the logical operations discussed before. For example we want all rows where Cyl is 6."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b54c86a8",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "cars[cars['Cyl'] == 6]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b9f33bde",
+   "metadata": {},
+   "source": [
+    "Sports cars with retail price larger than 100k."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0bf202fe",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "cars[(cars['Sports Car'] == 1) & (cars['Retail Price']>100000)]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3fa8ed3f",
+   "metadata": {},
+   "source": [
+    "## 4.2 Examining missing data\n",
+    "\n",
+    "Empty cells can potentially give you a wrong result when you analyze data.\n",
+    "to check if we have empty cells, we use the isnull() method with the sum method in order to sum the number of empty cells for each column. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "8004a292",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "cars.isnull().sum()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f453eb7c",
+   "metadata": {},
+   "source": [
+    "One way to deal with empty cells is to remove rows that contain empty cells.\n",
+    "\n",
+    "This is usually OK, since data sets can be very big, and removing a few rows will not have a big impact on the result."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6b652a9e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#copying the df so we won't remove rows from the original df we're using.\n",
+    "carscopy = cars.copy()\n",
+    "\n",
+    "carscopy = carscopy.dropna() #drop all rows that have any missing values\n",
+    "\n",
+    "carscopy.isnull().sum()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "56d0b2b2",
+   "metadata": {},
+   "source": [
+    "Another way of dealing with empty cells is to insert a new value instead.\n",
+    "This way you do not have to delete entire rows just because of some empty cells.\n",
+    "\n",
+    "The fillna() method allows us to replace empty cells with a value, using it on the whole df replaces all empty cells. using it on a column replaces empty cells in that column alone:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "1a1221f6",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "carscopy = cars.copy()\n",
+    "\n",
+    "carscopy[\"Len\"].fillna(130, inplace = True) \n",
+    "\n",
+    "carscopy.isnull().sum()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "82b59dc4",
+   "metadata": {},
+   "source": [
+    "A common way to replace empty cells, is to calculate the mean, median or mode value of the column.\n",
+    "\n",
+    "Pandas uses the mean() median() and mode() methods to calculate the respective values for a specified column"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f5a492b7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "cars_copy = cars.copy()\n",
+    "\n",
+    "x = cars_copy[\"Weight\"].mean()\n",
+    "\n",
+    "cars_copy[\"Width\"].fillna(x, inplace = True) \n",
+    "\n",
+    "cars_copy.isnull().sum()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "21bdcb3f",
+   "metadata": {},
+   "source": [
+    "### ** Task **\n",
+    "\n",
+    "Fill the City MPG column with the median."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0a95123e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "## Add your code here"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bbc0881f",
+   "metadata": {},
+   "source": [
+    "# 5. Addional useful operations\n",
+    "\n",
+    "\n",
+    "## 5.1 Adding a column\n",
+    "\n",
+    "For visualizations, in some cases, it may be useful to add a new column that is based on some other columns. To do this, we call the dataframe with the new column name df.column or df['column'] and set it to be the value of the wanted new column. for example, we create a column called new which is the width multiplied by Len."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "52a0dbe2",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "cars['new'] = cars['Width'] * cars['Len']\n",
+    "cars.head(2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e5b82530",
+   "metadata": {},
+   "source": [
+    "## 5.2 Aggregation\n",
+    "\n",
+    "Dataframe.aggregate() function is used to apply some aggregation across one or more column. Aggregate using callable, string, dict, or list of string/callable. The most frequently used aggregations are:\n",
+    "\n",
+    "- sum: Return the sum of the values for the requested axis\n",
+    "- min: Return the minimum of the values for the requested axis\n",
+    "- max: Return the maximum of the values for the requested axis"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c4fa042e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "cars.aggregate(['sum', 'min'])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c8527264",
+   "metadata": {},
+   "source": [
+    "# 6. Programming in python\n",
+    "\n",
+    "## 6.1 Python If ... Else\n",
+    "\n",
+    "read about the python if else https://www.w3schools.com/python/python_conditions.asp \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "19cb09b0",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a = 200\n",
+    "b = 33\n",
+    "\n",
+    "if b > a:\n",
+    "    print(\"b is greater than a\")\n",
+    "elif a == b:\n",
+    "    print(\"a and b are equal\")\n",
+    "else:\n",
+    "    print(\"a is greater than b\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "53f230d6",
+   "metadata": {},
+   "source": [
+    "## 6.2 Python while loops\n",
+    "\n",
+    "https://www.w3schools.com/python/python_while_loops.asp"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "32e8dca1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "i = 1\n",
+    "while i < 6:\n",
+    "    print(i)\n",
+    "    i += 1\n",
+    "else:\n",
+    "    print(\"i is no longer less than 6\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "912645c1",
+   "metadata": {},
+   "source": [
+    "## 6.3 Python for loops\n",
+    "\n",
+    "https://www.w3schools.com/python/python_for_loops.asp\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b272a974",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "for x in range(6):\n",
+    "    print(x)\n",
+    "    \n",
+    "for x in ['h', 'i', '!']:\n",
+    "    print(x)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.13"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

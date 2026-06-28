@@ -1,0 +1,50 @@
+# Dependencies
+viz-exam-app/node_modules/
+viz-exam-app/.pnp
+viz-exam-app/.pnp.*
+viz-exam-app/.yarn/*
+!viz-exam-app/.yarn/patches
+!viz-exam-app/.yarn/plugins
+!viz-exam-app/.yarn/releases
+!viz-exam-app/.yarn/versions
+
+# Next.js build outputs
+viz-exam-app/.next/
+viz-exam-app/out/
+viz-exam-app/build/
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+viz-exam-app/npm-debug.log*
+viz-exam-app/yarn-debug.log*
+viz-exam-app/yarn-error.log*
+
+# OS Files
+.DS_Store
+viz-exam-app/.DS_Store
+Thumbs.db
+
+# Python / Jupyter / Extraction outputs
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+extracted/
+
+# local env files
+.env*
+viz-exam-app/.env*
+
+# Vercel
+.vercel
+viz-exam-app/.vercel
+
+# TypeScript
+*.tsbuildinfo
+viz-exam-app/*.tsbuildinfo
+viz-exam-app/next-env.d.ts
+
+# PDF Files
+*.pdf
